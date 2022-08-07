@@ -1,0 +1,246 @@
+/* Variables */
+
+:root{
+--dark-blue-100:#609ED4;
+--dark-blue-200:#356EA9;
+--dark-blue-300:#0A3871;
+--dark-blue-400:#072B61;
+--dark-blue-500:#052051;
+
+--light-blue-100:#F3F5FC;
+--light-blue-200:#EFF1FA;
+--light-blue-300:#E9ECF8;
+--light-blue-400:#AAB2D5;
+--light-blue-500:#757FB2;
+
+--gray-100:#CED4DA;
+--gray-200:#ADB5BD;
+--gray-300:#868E96;
+--gray-400:#495057;
+--gray-500:#343A40;
+}
+
+/* General */
+
+* {
+    margin: 0;
+    border: 0;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+}
+body {
+    background-color: var(--light-blue-100);
+}
+#main-div-img {
+    width: 15%;
+}
+#img-alura {
+    width: 31.09px;
+    height: 48px;
+    padding-left: 70px;
+}
+main {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding-top: 25px;
+    padding-right: 2%;
+}
+
+#main-div-1 {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    width: 55%;
+}
+input[type=text] {
+    background-color: var(--light-blue-100);
+    /* height: 80vh; */
+    padding: 0 0 70% 10px;
+    color: var(--dark-blue-300);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+}
+input::placeholder {
+    color: var(--dark-blue-300);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+}
+
+input[type=text]:focus {
+    border-color: var(--light-blue-100);
+}
+
+#text-main-div-1 {
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+    justify-content: left;
+    color: var(--gray-400);
+    padding: 0 0 20px 0;
+}
+
+#main-div-buttons {
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+    width: 100%;
+}
+#button-encriptar, #button-desencriptar{
+    /* padding-left: 17%;
+    padding-right: 17%;
+    padding-top: 20px;
+    padding-bottom: 20px; */
+    height: 67px;
+    width: 332px;
+    background-color: var(--light-blue-300);
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.36px;
+    color: var(--dark-blue-300);
+
+
+    border: 1.8px solid var(--dark-blue-300);
+    border-radius: 24px;
+}
+
+#button-encriptar:hover, #button-desencriptar:hover{
+    background-color: var(--dark-blue-300);
+    color:  #D8DFE8;
+}
+
+section {
+    background-color: white;
+    width: 28%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 30px 0 30px;
+
+    border-radius: 20px;
+    box-shadow: 10px 11px 13px -8px rgba(0,0,0,0.35);
+}
+
+section img{
+    width: 90%;
+}
+
+section h3{
+    color: var(--gray-500);
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    line-height: 28.8px;
+    margin: 0 10px 0 10px;
+}
+
+#textarea-section::placeholder{
+    color: var(--gray-400);
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    line-height: 24px;
+    background-color: transparent;
+    /* padding-top: 10px;
+    margin: 0 10px 0 10px;
+    max-width: 100%; */
+}
+
+#textarea-section {
+    background-color: transparent;
+    width: 90%;
+    min-height: 3rem;
+    height: 60%;
+    text-align: center;
+    color: var(--gray-400);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+#button-copiar{
+    padding-left: 17%;
+    padding-right: 17%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: var(--light-blue-300);
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.36px;
+    color: var(--dark-blue-300);
+    border: 1.8px solid var(--dark-blue-300);
+    border-radius: 24px;
+}
+
+#button-copiar:hover{
+    background-color: var(--dark-blue-300);
+    color:  #D8DFE8;
+}
+
+@media (max-width: 1400px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+    #main-div-img {
+        align-self: flex-start;
+    }
+
+    section img{
+        width: 90%;
+        display: none;
+    }
+
+    section {
+        width: 80%;
+        max-width: none;
+        min-height: 200px;
+        height: fit-content;
+        margin-bottom: 200px;
+    }
+    #button-copiar{
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 670px){
+    #main-div-1{
+        width: 95%;
+    }
+    section{
+        margin-top: 30px;
+    }
+    input[type=text]{
+        width: 100%;
+        height: 90vh;
+    }
+    #main-div-buttons{
+        flex-direction: column;
+    }
+    #button-desencriptar{
+    margin-top: 15px;
+    }
+    #textarea-section {
+        background-color: transparent;
+        width: 90%;
+        min-height: 3rem;
+        height: 50vh;
+        text-align: center;
+        color: var(--gray-400);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        margin: 20px 0 0 0;
+    }
+    section{
+        height: fit-content;
+    }
+    #button-copiar{
+        margin-bottom: 30px;
+    }
+}
